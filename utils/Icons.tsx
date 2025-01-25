@@ -1,0 +1,12 @@
+export const home = <i className="fa-solid fa-house-chimney" />;
+export const chart = <i className="fa-solid fa-chart-pie" />;
+export const check = <i className="fa-solid fa-circle-check" />;
+export const logout = <i className="fa-solid fa-right-from-bracket" />;
+export const login = <i className="fa-solid fa-right-to-bracket" />;
+export const list = <i className="fa-solid fa-list" />;
+export const dots = <i className="fa-solid fa-comment-dots" />;
+export const checkAbc = <i className="fa-solid fa-spell-check" />;
+export const flag = <i className="fa-solid fa-flag" />;
+export const crosshairs = <i className="fa-solid fa-crosshairs" />;
+export const next = <i className="fa-solid fa-forward" />;
+export const play = <i className="fa-solid fa-play" />;

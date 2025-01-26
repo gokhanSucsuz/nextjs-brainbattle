@@ -1,5 +1,4 @@
 "use client";
-
 import HomeCard from "@/components/quiz/HomeCard";
 import { useGlobalContext } from "@/context/globalContext";
 import { ICategory } from "@/types/types";

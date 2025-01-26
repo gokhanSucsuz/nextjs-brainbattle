@@ -6,6 +6,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Kanit } from 'next/font/google';
 import "./globals.css";
 import Header from '@/components/Header';
+import ContextProvider from '@/providers/ContextProvider';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,7 +35,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-     <ClerkProvider>
+    <ClerkProvider>
+      <ContextProvider>
       <html lang="en">
         <head>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
@@ -43,7 +45,8 @@ export default function RootLayout({
           <Header/>
           <main className='py-8 mx-[15rem] xl:mx-[25rem] h-full'>{children}</main>
         </body>
-      </html>
+        </html>
+        </ContextProvider>
     </ClerkProvider>
   );
 }

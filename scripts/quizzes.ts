@@ -20,17 +20,17 @@ const quizzes = [
 	},
 	{
 		title: "Physics",
-		description: "Test your knowledge of physics.",
+		description: "Test your knowledge of physics",
 		categoryId: "67961533d74e299c563bbfb4"
 	},
 	{
 		title: "Biology",
-		description: "Test your knowledge of biology.",
+		description: "Test your knowledge of physics",
 		categoryId: "67961534d74e299c563bbfb6"
 	},
 	{
 		title: "Chemistry",
-		description: "Test your knowledge of chemistry.",
+		description: "Test your knowledge of physics",
 		categoryId: "67961533d74e299c563bbfb5"
 	}
 ];
@@ -42,9 +42,9 @@ async function seedQuizzes() {
 		const createdQuiz = await quizPrisma.quiz.create({
 			data: quiz
 		});
-		console.log("Created quiz =>", createdQuiz);
+		console.log("Created quiz => ", createdQuiz);
 	}
-	console.log("Quizzes Seeded!");
+	console.log("Quizzes Seeded"!);
 }
 
 seedQuizzes()

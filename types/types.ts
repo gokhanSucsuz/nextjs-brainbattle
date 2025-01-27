@@ -2,15 +2,15 @@ interface ICategory {
 	id: string;
 	name: string;
 	description: string;
-	image?: string;
+	image?: string | null;
 	quizzes: IQuiz[];
 }
 
 interface IQuiz {
 	id: string;
 	title: string;
-	description?: string;
-	image?: string;
+	description?: string | null;
+	image?: string | null;
 	categoryId: string;
 	questions: IQuestion[];
 }

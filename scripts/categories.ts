@@ -39,9 +39,7 @@ async function seedQuizzes() {
 	quizPrisma = new PrismaClient();
 	console.log("Seeding Quizzes...");
 	for (const quiz of quizzes) {
-		const createdQuiz = await quizPrisma.quiz.create({
-			data: quiz
-		});
+		const createdQuiz = await quizPrisma.quiz.create({ data: quiz });
 		console.log("Created quiz =>", createdQuiz);
 	}
 	console.log("Quizzes Seeded!");

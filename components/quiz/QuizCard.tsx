@@ -1,6 +1,8 @@
+"use client";
 import { IQuiz } from "@/types/types";
 import { dots } from "@/utils/Icons";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 interface Props {
@@ -8,6 +10,11 @@ interface Props {
 }
 
 const QuizCard = ({ quiz }: Props) => {
+	const router = useRouter();
+
+	const handleClick = () => {
+		router.push(`/quiz/setup/${quiz.id}`);
+	};
 	return (
 		<div className="border-2 rounded-xl p-1 cursor-pointer shadow-[0_.3rem_0_0_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-transform duration-300 ease-in-out">
 			<div className="py-2 px-6 flex flex-col gap-4">
@@ -25,6 +32,7 @@ const QuizCard = ({ quiz }: Props) => {
 						width={300}
 						height={200}
 						className="rounded-xl h-full p-2"
+						onClick={handleClick}
 					/>
 				</div>
 				<div>
